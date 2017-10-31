@@ -4,7 +4,7 @@
 void ofApp::setup(){
     ofSetVerticalSync(true);
     
-    int num = 1500;
+    int num = 1000;
     p.assign(num, particle());
     
     makeParticles();
@@ -17,8 +17,11 @@ void ofApp::setup(){
     ghost.load("whiteghost.png");
     pumpkins.load("background.png");
     
-    xPos = 5;
-    speed = 2;
+    mySound.load("creepy.mp3");
+    mySound.setLoop(true);
+    mySound.play();
+    
+    
 }
 
 //--------------------------------------------------------------
@@ -70,6 +73,7 @@ void ofApp::update(){
         
     }
     grayImage = colorImg;
+  
     
 }
 
@@ -102,7 +106,7 @@ void ofApp::keyPressed(int key){
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-    
+
 }
 
 //--------------------------------------------------------------

@@ -40,8 +40,9 @@ public:
     
     ofImage pumpkins;
     ofImage ghost;
-    int xPos;
-    int speed;
+
+    ofSoundPlayer   mySound;
+    // music by bensound.com
     
     
 };
